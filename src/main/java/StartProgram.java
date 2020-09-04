@@ -1,11 +1,16 @@
 
+import service.RegisterAndLogginService;
+import service.Step2;
+import service.Step3;
+
 import java.util.Scanner;
 
 import static service.StartingService.*;
-import static service.RegisterService.*;
+import static service.RegisterAndLogginService.*;
 
 public class StartProgram {
     public static void main(String[] args) {
+
         /**
          * Step 1
          * Starting Program - welcome message
@@ -13,48 +18,18 @@ public class StartProgram {
         WelcomeMessage();
 
         /**
-         * Step 2
+         * Step 2 - register and loggin form
          */
-        Scanner in = new Scanner(System.in);
-        System.out.println("Loggin - press 1 \nRegister - press 2");
-        int statusStep2;
-
-            if(in.hasNextInt()){
-                statusStep2=in.nextInt();
-
-                if(statusStep2==1){
-                    LogginForm();
-                }
-                else if(statusStep2==2){
-                    RegisterForm();
-                }
+        while (Step2.StepNumber2()!=1) {
+            if(Step2.StepNumber2()==1){
+                break;
             }
-            else{
-                in.next();
-                statusStep2=0;
-            }
-
-            if((statusStep2!=1)&&(statusStep2!=2)){
-            while ((statusStep2 != 1) || (statusStep2 != 2)) {
-                System.out.println("Invalid input data");
-                if (in.hasNextInt()) {
-                    statusStep2 = in.nextInt();
-                    if (statusStep2 == 1) {
-                        System.out.println("Loggin");
-                        break;
-                    } else if (statusStep2 == 2) {
-                        RegisterForm();
-                        break;
-                    }
-                } else {
-                    String dummy = in.next();
-                    statusStep2 = 0;
-                }
-            }
+            Step2.StepNumber2();
         }
         /**
-         * STEP 3
+         * STEP 3 - client panel
          */
-        LogginForm();
+        System.out.println("Step 3");
+        Step3.stepNumber3();
     }
 }

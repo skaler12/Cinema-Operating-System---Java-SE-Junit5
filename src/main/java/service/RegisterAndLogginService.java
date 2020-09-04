@@ -4,8 +4,12 @@ import entity.User;
 import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
-public class RegisterService {
+public class RegisterAndLogginService {
+    public static List<User>ListAccepted = new LinkedList<>();
+    public static User userWithLoggin;
+
     public static LinkedList<User>usersList = new LinkedList<>();
     /**
      *Methods which create User account
@@ -23,7 +27,10 @@ public class RegisterService {
         while (!logginStatus) {
             System.out.println("Enter Login");
             loggin = in.nextLine();
-
+            //EXIT
+            if(loggin.equals("exit")){
+                System.exit(0);
+            }
             if(loggin.length()<=4){
                 System.out.println("Loggin is too short. Loggin length minimum 5 chars");
                 continue;
@@ -39,6 +46,10 @@ public class RegisterService {
         while (!passwordStatus) {
             System.out.println("Enter Password");
             password = in.nextLine();
+            //Exit
+            if(password.equals("exit")){
+                System.exit(0);
+            }
 
             if(password.length()<=3){
                 System.out.println("Pasword is too short. Password length minimum 4 chars");
@@ -52,7 +63,7 @@ public class RegisterService {
          * Money input data
          */
         int money;
-        System.out.println("enter amout of money");
+        System.out.println("enter amount of money");
         Scanner sc = new Scanner(System.in);
 
         if(sc.hasNextInt()){
@@ -95,13 +106,50 @@ public class RegisterService {
         System.out.println(info);
     }
 
+    /**
+     * Method with give acces to user accout, couse loggin user
+     */
     public static void LogginForm(){
+        /**
+         * Loggin input data
+         */
         Scanner in = new Scanner(System.in);
-        System.out.println("Please enter your loggin");
-        String logginSearching = in.next();
-        Optional<User> userSearching = Optional.of(usersList.stream()
-                .filter(user -> (user.getLogin().equals(logginSearching)))
-                .findAny()
-                .get());
+        boolean logginStatus = false;
+        String logginSearching;
+        while (!logginStatus) {
+            System.out.println("Please enter your loggin");
+            logginSearching = in.nextLine();
+            String finalLogginSearching = logginSearching;
+
+            //EXIT
+            if(finalLogginSearching.equals("exit")){
+                System.exit(0);
+            }
+
+            List<User>ListAccepted = usersList.stream()
+                    .filter(user -> (user.getLogin().equals(finalLogginSearching)))
+                    .collect(Collectors.toList());
+            if(ListAccepted.isEmpty()){
+                System.out.println("Ups.. we have not account with this loggin, try again");
+                continue;
+            }
+            else {
+                userWithLoggin = ListAccepted.get(0);
+                System.out.println("Please enter your password");
+                String passwordSearch = in.next();
+                //Exti
+                if(passwordSearch.equals("exit")){
+                    System.exit(0);
+                }
+                if(passwordSearch.equals(ListAccepted.get(0).getPassword())){
+                    System.out.println("Loggin succesfull");
+                }
+                else{
+                    System.out.println("ups something went wrong :(");
+                    continue;
+                }
+            }
+            logginStatus=true;
+        }
     }
 }
