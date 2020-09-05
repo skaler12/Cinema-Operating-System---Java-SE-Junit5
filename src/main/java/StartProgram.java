@@ -1,12 +1,7 @@
 
-import service.RegisterAndLogginService;
-import service.Step2;
+import service.Steo2Running;
+import service.Step1;
 import service.Step3;
-
-import java.util.Scanner;
-
-import static service.StartingService.*;
-import static service.RegisterAndLogginService.*;
 
 public class StartProgram {
     public static void main(String[] args) {
@@ -15,21 +10,23 @@ public class StartProgram {
          * Step 1
          * Starting Program - welcome message
          */
-        WelcomeMessage();
+        Step1.WelcomeMessage();
 
         /**
          * Step 2 - register and loggin form
          */
-        while (Step2.StepNumber2()!=1) {
-            if(Step2.StepNumber2()==1){
-                break;
-            }
-            Step2.StepNumber2();
-        }
+         Steo2Running.Step2Run();
         /**
          * STEP 3 - client panel
          */
-        System.out.println("Step 3");
+        /**
+         * Typy generyczne , try with resources, lambda, stream, op. na plikach , serializacja
+         * Musi być mozliwość zobaczenia wszystkich seansow wraz z godzinami ich grania i dniami
+         * nastepnie wygenerowanie metody kup bilet , ktora odejmie kase za bilet i wygeneruje gotowy dokument
+         * nastepnie obiekt user zostanie zserializowany tak by mozna bylo go gdzie indziej otworzyc
+         * uzyc lambd i stramaow do szukania . Na koniec user powinien zobaczyc swoje bilety
+         */
         Step3.stepNumber3();
+
     }
 }

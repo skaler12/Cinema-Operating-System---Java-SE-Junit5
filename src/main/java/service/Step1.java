@@ -1,6 +1,6 @@
 package service;
 
-public class StartingService {
+public class Step1 {
     public static void WelcomeMessage(){
         String element1 = "|==";
         String element2 = "==|";
