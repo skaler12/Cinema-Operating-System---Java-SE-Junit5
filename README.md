@@ -38,3 +38,35 @@ In this project i use:
 - Start application , use commend java StartProjects
 Ofcourse you can after compile, building ,JAR file, use command - cf CinemaOperatingSystem.jar .
 
+# The program is used to operate the cinema
+Program has 3 step 
+
+## 1 step 
+Welcome Message 
+When user start program get Welcome message 
+
+
+## 2 step
+Now user can create account , loggin account or stop application 
+Application is protected against entering an incorrect data format
+
+
+## 3 step 
+User Can:
+- see all spectacles in this week, and buy tickets.
+- see all buying tickets 
+- Go back to Step 2 
+
+
+If user buy tickets, appilaction generate .txt file in tickets directory 
+
+Application has also methods for Developers. 
+Methods:
+- SerializableUserWithLoggin()
+- ReadSerializableObject
+couse that developers has save and read .bin file which contain information about user who are loggin in application. 
+
+Do you need more infrmaction ? 
+Look at index.html file in main directory - this is JavaDoc. 
+
+Check it Out ! 
