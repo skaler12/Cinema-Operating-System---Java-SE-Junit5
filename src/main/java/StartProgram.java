@@ -5,6 +5,9 @@ import service.Step3;
 
 import java.io.IOException;
 
+import static dto.SerializableUserLoggin.ReadSerializableObject;
+import static dto.SerializableUserLoggin.SerializableUserWithLoggin;
+
 public class StartProgram {
     public static void main(String[] args) throws IOException {
 
@@ -30,6 +33,6 @@ public class StartProgram {
          */
         Step3.stepNumber3();
 
-        //pozostało zrobic refactor kodu, napisac testy, dodac opcje zapisu do pliku oraz serializacji(mozna zrobi obiektu userWithLoggin.
+        //pozostało zrobic refactor kodu, napisac testy, serializacji(mozna zrobi obiektu userWithLoggin).
     }
 }
