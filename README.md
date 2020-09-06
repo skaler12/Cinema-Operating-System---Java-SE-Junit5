@@ -67,6 +67,6 @@ Methods:
 couse that developers has save and read .bin file which contain information about user who are loggin in application. 
 
 Do you need more infrmaction ? 
-Look at index.html file in main directory - this is JavaDoc. 
+Look at index.html file in main directory - this is JavaDoc. - https://github.com/skaler12/Cinema-Operating-System---Java-SE-Junit5/blob/master/index.html 
 
 Check it Out ! 
