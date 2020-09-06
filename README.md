@@ -22,19 +22,19 @@ In this project i use:
 - Junit5
 
 
-#The program runs in the console:
+# The program runs in the console:
 
 ## Run applications - recommended version
--Downland code 
--Open Intellij IDE
--Open projects - pom.xml file (building by Maven)
--Run Main function from StartProgram.class
+- Downland code 
+- Open Intellij IDE
+- Open projects - pom.xml file (building by Maven)
+- Run Main function from StartProgram.class
 
 ## Run application - alternative version 
--Downland code
--Open cmd
--set projects directory 
--Compile projects , use javac /StartProjects.java
--Start application , use commend java StartProjects
+- Downland code
+- Open cmd
+- set projects directory 
+- Compile projects , use javac /StartProjects.java
+- Start application , use commend java StartProjects
 Ofcourse you can after compile, building ,JAR file, use command - cf CinemaOperatingSystem.jar .
 
