@@ -1,4 +1,4 @@
-# Cinema-Operating-System---Java-SE-Junit5
+# Cinema Operating System - JavaSE & Junit5
 
 ## This project was create in order to improve programming skills in Java SE and Junit5
 ![movie-time-poster-vintage-cinema-film-projector-vector-26789991](https://user-images.githubusercontent.com/57706581/92334897-65adc580-f092-11ea-926a-7765849bb542.jpg)
