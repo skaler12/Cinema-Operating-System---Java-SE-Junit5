@@ -4,7 +4,7 @@ import entity.User;
 
 import java.io.*;
 
-import static service.RegisterAndLogginService.userWithLoggin;
+import static additionalInstructions.RegisterAndLogginService.userWithLoggin;
 
 public class SerializableUserLoggin {
     /**

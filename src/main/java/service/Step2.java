@@ -2,8 +2,8 @@ package service;
 
 import java.util.Scanner;
 
-import static service.RegisterAndLogginService.LogginForm;
-import static service.RegisterAndLogginService.RegisterForm;
+import static additionalInstructions.RegisterAndLogginService.LogginForm;
+import static additionalInstructions.RegisterAndLogginService.RegisterForm;
 
 public class Step2 {
     public static int StepNumber2() {

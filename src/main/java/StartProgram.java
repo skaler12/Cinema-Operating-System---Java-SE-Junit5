@@ -1,12 +1,9 @@
 
-import service.Steo2Running;
+import additionalInstructions.Step2Running;
 import service.Step1;
 import service.Step3;
 
 import java.io.IOException;
-
-import static dto.SerializableUserLoggin.ReadSerializableObject;
-import static dto.SerializableUserLoggin.SerializableUserWithLoggin;
 
 public class StartProgram {
     public static void main(String[] args) throws IOException {
@@ -20,19 +17,10 @@ public class StartProgram {
         /**
          * Step 2 - register and loggin form
          */
-         Steo2Running.Step2Run();
+         Step2Running.Step2Run();
         /**
-         * STEP 3 - client panel
-         */
-        /**
-         * Typy generyczne , try with resources, lambda, stream, op. na plikach , serializacja
-         * Musi być mozliwość zobaczenia wszystkich seansow wraz z godzinami ich grania i dniami
-         * nastepnie wygenerowanie metody kup bilet , ktora odejmie kase za bilet i wygeneruje gotowy dokument
-         * nastepnie obiekt user zostanie zserializowany tak by mozna bylo go gdzie indziej otworzyc
-         * uzyc lambd i stramaow do szukania . Na koniec user powinien zobaczyc swoje bilety
+         * STEP 3 - client panel - buy tickets, tickets list, more...
          */
         Step3.stepNumber3();
-
-        //pozostało zrobic refactor kodu, napisac testy, serializacji(mozna zrobi obiektu userWithLoggin).
     }
 }

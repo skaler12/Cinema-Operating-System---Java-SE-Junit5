@@ -1,29 +1,19 @@
 package service;
 
+import additionalInstructions.Step2Running;
 import dto.SpectacleList;
 import entity.Spectacle;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
-import java.util.stream.Stream;
 
-import static service.RegisterAndLogginService.userWithLoggin;
+import static additionalInstructions.RegisterAndLogginService.userWithLoggin;
 
 public class Step3 {
     public static void stepNumber3() throws IOException {
-        /**
-         * Typy generyczne , try with resources, lambda, stream, op. na plikach , serializacja
-         *          * Musi być mozliwość zobaczenia wszystkich seansow wraz z godzinami ich grania i dniami
-         *          * nastepnie wygenerowanie metody kup bilet , ktora odejmie kase za bilet i wygeneruje gotowy dokument
-         *          * nastepnie obiekt user zostanie zserializowany tak by mozna bylo go gdzie indziej otworzyc
-         *          * uzyc lambd i streamow do szukania . Na koniec user powinien zobaczyc swoje bilety
-         */
+
         System.out.println(welcomeMessage());
         boolean status = false;
         while (!status) {
@@ -31,15 +21,15 @@ public class Step3 {
             Scanner in = new Scanner(System.in);
             int optionCheck = in.nextInt();
             if (optionCheck == 1) {
-                System.out.println("lista spektakli ");
+                System.out.println("Spectacle List ");
                 buyTicket();
 
             } else if (optionCheck == 2) {
-                System.out.println("lista biletow");
+                System.out.println("Tickets List");
                 checkYourTickets();
             }
             else if(optionCheck==3){
-                Steo2Running.Step2Run();
+                Step2Running.Step2Run();
                 break;
             }
             else {
@@ -216,7 +206,7 @@ public class Step3 {
                 }
             }
             else {
-                System.out.println("We have not spectacl with this number :(");
+                System.out.println("We have not spectacle with this number :(");
                 Step3.stepNumber3();
             }
         }

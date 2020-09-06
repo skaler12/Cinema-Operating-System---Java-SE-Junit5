@@ -1,4 +1,4 @@
-package service;
+package additionalInstructions;
 
 import entity.User;
 import org.w3c.dom.ls.LSOutput;
