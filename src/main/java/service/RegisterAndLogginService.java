@@ -3,6 +3,7 @@ package service;
 import entity.User;
 import org.w3c.dom.ls.LSOutput;
 
+import javax.swing.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -118,13 +119,14 @@ public class RegisterAndLogginService {
         String logginSearching;
         while (!logginStatus) {
             System.out.println("Please enter your loggin");
+            System.out.println("Write --- exit ---  if your program have not any account , and rerun program! Next, first register Client , Good Luck!");
             logginSearching = in.nextLine();
             String finalLogginSearching = logginSearching;
-
             //EXIT
             if(finalLogginSearching.equals("exit")){
                 System.exit(0);
             }
+
 
             List<User>ListAccepted = usersList.stream()
                     .filter(user -> (user.getLogin().equals(finalLogginSearching)))

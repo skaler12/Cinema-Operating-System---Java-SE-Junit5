@@ -3,8 +3,10 @@ import service.Steo2Running;
 import service.Step1;
 import service.Step3;
 
+import java.io.IOException;
+
 public class StartProgram {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         /**
          * Step 1
@@ -28,5 +30,6 @@ public class StartProgram {
          */
         Step3.stepNumber3();
 
+        //pozostało zrobic refactor kodu, napisac testy, dodac opcje zapisu do pliku oraz serializacji(mozna zrobi obiektu userWithLoggin.
     }
 }

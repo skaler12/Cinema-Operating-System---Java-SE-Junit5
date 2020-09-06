@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
+import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -27,7 +28,7 @@ public class User {
 
     private int money;
 
-    private List<Spectacle>spectacleList;
+    private List<Spectacle>spectacleList = new LinkedList<>();
 
     private UserRole userRole = UserRole.CLIENT;
 
