@@ -44,19 +44,19 @@ Program has 3 step
 ## 1 step 
 Welcome Message 
 When user start program get Welcome message 
-
+![step1](https://user-images.githubusercontent.com/57706581/92335501-bd9afb00-f097-11ea-8eb4-831b3089df87.PNG)
 
 ## 2 step
 Now user can create account , loggin account or stop application 
 Application is protected against entering an incorrect data format
-
+![Step2](https://user-images.githubusercontent.com/57706581/92335502-becc2800-f097-11ea-8057-fb09cdd2db5d.PNG)
 
 ## 3 step 
 User Can:
 - see all spectacles in this week, and buy tickets.
 - see all buying tickets 
 - Go back to Step 2 
-
+![Step3](https://user-images.githubusercontent.com/57706581/92335504-bffd5500-f097-11ea-937a-2d7e6a3951bf.PNG)
 
 If user buy tickets, appilaction generate .txt file in tickets directory 
 
